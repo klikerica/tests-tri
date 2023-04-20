@@ -15,9 +15,6 @@ def plot_tri_simple(ax, points, tri):
 
     ax.scatter(points[:,0], points[:,1], points[:,2], color='b')
 
-# points= np.array([[1,2,2],[2,2.8,2],[5,2,2],[4,2.8,2],[2.5,2,3],[4,2.8,4],[1,3,6],[5,2.6,2]]) # int x,y,z - previous setup with added 8 point
-# points= np.array([[1,2,2],[3,2.8,2],[5,2.5,2],[5,3,2],[2,2.2,3],[4,2.8,5],[1,3,6]]) # int x,y,z - more similar to actual setup
-# points= np.array([[1,2,2],[2,2.5,2],[5,2.5,2],[3,2.4,6],[5,2.5,5], [1.5,2.1,3]]) - tryout one base triangle
 points= np.array([[1,2,2],[3,2.8,2],[5,2.5,2],[5,3,2],[2,2.2,3],[4,2.8,5],[3,2.6,6]])
 tri = Delaunay(points)
 
@@ -50,7 +47,6 @@ def collect_edges(tri):
         edges.add(sorted_tuple(i2,i3))
     return edges
 
-# how to list all the edges?
 
 fig = plt.figure()
 ax = plt.axes(projection='3d')
